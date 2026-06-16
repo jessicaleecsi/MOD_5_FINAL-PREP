@@ -1,5 +1,7 @@
 const postListEl = document.querySelector(".post-list");
 const id = localStorage.getItem("id")
+const params = new URLSearchParams(window.location.search);
+const userId = params.get('userId'); // returns "1"
 
 async function onSearchChange(event) {
     const id = event.target.value;
